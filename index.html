@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 задание</title>
+	<style>
+		/* Див с картинкой фоном 'you win', который скрыт. */
+		.box {
+			background-image: url(1.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="box1">
+	<h1>Количество кликов: <span class="span"></span></h1>
+	<button class="btn">Нажми</button></div>
+	<div class="box">
+	</div>
+	<script type="text/javascript">
+		// создай переменную sum, которая содержит число 0.
+		// выведи в тег span значение переменной sum.
+		// при клике на кнопку, sum увеличивается на + 1 и выводится на экран. если sum больше или равно 5 то, скрыть кнопку и отобразить див с картинкой фоном (you win).
+
+		let sum =0;
+		document.querySelector('.span').innerHTML=sum
+		document.querySelector('.btn').onclick=function() {
+			sum=sum+1
+			document.querySelector('.span').innerHTML=sum;
+			if (sum>=5){
+				document.querySelector('.box1').style.display="none"
+				document.querySelector('.box').style.display="block"
+			}
+
+		}
+	</script>
+</body>
+</html>
